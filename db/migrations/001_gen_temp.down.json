@@ -1,0 +1,6 @@
+[
+  {
+    "delete": "versions",
+    "deletes": [ { "q": { "version": "v1.0.0" }} ]
+  }
+]

@@ -1,0 +1,17 @@
+[{
+  "insert": "versions",
+  "documents": [
+    {
+      "name": "sigma",
+      "version": "v1.0.0"
+    },
+    {
+      "name": "delta",
+      "version": "v1.0.0"
+    },
+    {
+      "name": "theta",
+      "version": "v1.0.0"
+    }
+  ]
+}]
