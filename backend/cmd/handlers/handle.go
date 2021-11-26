@@ -20,9 +20,14 @@ type Environment struct {
 }
 
 func Handle(r *gin.Engine, envy *Environment) {
+	r.GET("/", envy.FrontendRedirect)
 	r.GET("/healthcheck", envy.Healthcheck)
 	r.GET("/hostname", envy.Hostname)
 	r.POST("/create", envy.CreateID)
 	r.GET("/id/:id", envy.CheckID)
 	r.GET("/:id", envy.Redirect)
+}
+
+func (envy *Environment) FrontendRedirect(c *gin.Context) {
+	c.Redirect(302, "https://link.shrt.fyi")
 }
