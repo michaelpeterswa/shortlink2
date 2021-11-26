@@ -5,10 +5,21 @@ type Settings struct {
 	RedisPort     int    `yaml:"redis-port"`
 	RedisPassword string `yaml:"redis-password"`
 
+	ExposedURL string `yaml:"exposed-url"`
+
 	MongoURI string `yaml:"mongo-uri"`
+
+	ZapLevel string `yaml:"zap-level"`
+
+	GinMode string `yaml:"gin-mode"`
 }
 
-type Version struct {
-	Name    string `bson:"name,omitempty" json:"name,omitempty"`
-	Version string `bson:"version,omitempty" json:"version,omitempty"`
+type ShortLink struct {
+	ID   string `bson:"shortid" json:"shortid"`
+	Link string `bson:"shortlink" json:"shortlink"`
+	URL  string `bson:"url" json:"url"`
+}
+
+type LinkPostBody struct {
+	URL string `json:"url"`
 }

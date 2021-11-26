@@ -1,17 +1,18 @@
 [{
-  "insert": "versions",
+  "insert": "links",
   "documents": [
     {
-      "name": "sigma",
-      "version": "v1.0.0"
-    },
+      "shortid": "",
+      "shortlink": "",
+      "url": "https://google.com"
+    }
+  ]
+},
+{
+  "insert": "healthcheck",
+  "documents": [
     {
-      "name": "delta",
-      "version": "v1.0.0"
-    },
-    {
-      "name": "theta",
-      "version": "v1.0.0"
+      "health": "ok"
     }
   ]
 }]

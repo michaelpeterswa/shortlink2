@@ -4,7 +4,7 @@ import (
 	"context"
 	"log"
 
-	"github.com/michaelpeterswa/sigma/backend/cmd/structs"
+	"github.com/michaelpeterswa/shortlink2/backend/cmd/structs"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
@@ -13,11 +13,8 @@ type MongoConn struct {
 	Client mongo.Client
 }
 
-func InitMongo(ctx context.Context, settings structs.Settings) *MongoConn {
+func InitMongo(ctx context.Context, settings *structs.Settings) *MongoConn {
 
-	/*
-	   Connect to my cluster
-	*/
 	client, err := mongo.NewClient(options.Client().ApplyURI(settings.MongoURI))
 	if err != nil {
 		log.Fatal(err)

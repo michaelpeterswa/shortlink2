@@ -3,4 +3,10 @@ redis-url: "redis"
 redis-port: 6379
 redis-password: ""
 
+exposed-url: "http://localhost:8080"
+
 mongo-uri: "mongodb://root:example@mongo:27017/"
+
+zap-level: "dev"
+
+gin-mode: "debug"
